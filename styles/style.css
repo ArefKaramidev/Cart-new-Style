@@ -1,0 +1,247 @@
+@font-face {
+  font-family: "Vazir-FD";
+  src: url("../webfonts/Vazir-FD.woff");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  direction: rtl;
+  font-family: "Vazir-FD";
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 255, 255) 30%,
+    rgb(228, 223, 245)
+  );
+}
+
+/* -------- header-Start ----------- */
+
+header {
+  width: 100%;
+  height: 5rem;
+  background-image: linear-gradient(to right, pink, #2a17d3b8);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+header .icon {
+  position: relative;
+  display: inline-block;
+  padding: 1.5rem 10% 0rem 0rem;
+}
+
+header .icon #count {
+  position: absolute;
+  top: 8px;
+  left: 27px;
+  padding: 0.1rem 0.3rem;
+  border-radius: 10px;
+  color: #fff;
+  background-color: rgb(179, 105, 249);
+}
+
+header #ico {
+  font-size: 2rem;
+  color: rgb(222, 187, 255);
+}
+
+/* -------- header-End ----------- */
+
+main #section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+main #section1 #title {
+  font-size: 3rem;
+  color: #ce8bdd;
+  font-weight: 600;
+}
+
+#section1 .product-center {
+  width: 95vw;
+  margin: 4% auto;
+  max-width: 1270px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 1.5rem;
+  row-gap: 4rem;
+}
+
+#section1 .product {
+  width: 100%;
+  height: 80%;
+  margin-top: 3%;
+  position: relative;
+  overflow: hidden;
+  overflow: hidden;
+}
+
+#section1 .product img {
+  width: 100%;
+  height: 100%;
+}
+
+#section1 .product button {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 20px;
+  background-color: rgb(49 96 153);
+  border: none;
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  transition-duration: 0.3s;
+  box-shadow: 0px 3px 6px rgb(49 96 153);
+  border-radius: 15px 0px 0px 15px;
+  padding: 10px 20px;
+}
+
+#section1 .product button:active {
+  right: -10px;
+}
+
+#section1 .product button:hover {
+  box-shadow: none;
+}
+
+#section1 .info {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#section1 .info #title {
+  color: rgb(159, 69, 244);
+  font-size: x-large;
+  font-weight: 600;
+}
+
+#section1 .info div span {
+  font-size: larger;
+  font-weight: 500;
+}
+
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+  background: rgb(0, 0, 0, 0.3);
+  z-index: 2;
+  visibility: hidden;
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 3;
+  background: #f3e5f5;
+  padding: 1.5rem;
+  transition: all 0.3s linear;
+  transform: translateX(100%);
+}
+
+.showCart {
+  transform: translateX(0);
+}
+
+.transparentBcg {
+  visibility: visible;
+}
+.close-cart {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.cart h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cart-content {
+  direction: rtl;
+}
+
+.cart-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.cart-item img {
+  width: 75px;
+  height: 75px;
+}
+
+.cart-item h4 {
+  font-size: 0.85rem;
+}
+
+.cart-item h5 {
+  margin: 0.5rem 0;
+}
+
+.item-amount {
+  text-align: center;
+}
+
+.remove-item {
+  color: #757575;
+  cursor: pointer;
+}
+.fa-chevron-up,
+.fa-chevron-down {
+  color: #7b1fa2;
+  cursor: pointer;
+}
+
+.cart-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.cart-footer h3 {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+
+@media screen and (min-width: 260px) and (max-width: 520px) {
+  main {
+    margin-top: 30%;
+  }
+}
+
+.clear-cart {
+  padding: 0.5rem;
+  background-color: #ce93d8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
